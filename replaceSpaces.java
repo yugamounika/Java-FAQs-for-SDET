@@ -1,4 +1,11 @@
-package glassdoorFAQ;
+package JavaFAQ;
+
+/*Count the number of spaces in given string
+  Let it be 'count'
+  Replace each space in the string with,
+  'count' number of spaces
+  i.e. if count = 4, each space is replaced with 4 spaces
+  */
 
 public class replaceSpaces
 {
