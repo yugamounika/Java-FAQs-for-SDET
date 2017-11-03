@@ -69,7 +69,7 @@ public class firstNonRepeatingCharUsingHashMap
     // Driver method
     public static void main (String[] args)
     {
-    	String str = "geeksforgeeks";
+    	String str = "yugachyuga";
     	int index =  firstNonRepeating(str);
     	
     	System.out.println(index == Integer.MAX_VALUE ? "Either all characters are repeating " +
