@@ -15,7 +15,7 @@ public class MatrixTranspose
 		String array[][] = new String[row][column];
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter matrix:");
+		System.out.println("Enter matrix elements:");
 	 	for(i = 0; i < row; i++)
 	 	{
 	 		for(j = 0; j < column; j++)
