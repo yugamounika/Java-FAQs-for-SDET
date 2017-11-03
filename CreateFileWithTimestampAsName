@@ -1,0 +1,20 @@
+import java.io.*;
+import java.nio.file.Files;
+import java.text.SimpleDateFormat;
+import java.nio.file.*;
+
+/* Creating new files with current timestamp as the filename */
+
+public class CreateFile
+{
+	public static void main(String[] args) throws IOException, InterruptedException
+	{
+		int count = 8;
+		for(int i = 1; i <= count; i++)
+		{
+			String timeStamp = new SimpleDateFormat("MM.dd.yyyy.HH.mm.ss.SSS").format(new java.util.Date());
+			Thread.sleep(1);
+			Files.createFile(Paths.get("path\\to\\file\\" +timeStamp+ ".txt"));
+			System.out.println("File"+i+" Created\n");
+		}
+}
