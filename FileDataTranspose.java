@@ -6,6 +6,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/*Read columns and rows from a text file(.txt),
+  transposes the matrix,
+  writes the transposed matrix to a new file
+  */
+
 public class FileDataTranspose
 {
 	public static void main(String[] args) throws IOException
@@ -13,14 +18,14 @@ public class FileDataTranspose
 		
 		int i, j;
 		int row = 4, column = 2;
-        String array[][] = new String[row][column];
+        	String array[][] = new String[row][column];
         
 		// Opening file to Read from
-		final String sourceFile = "Y:\\Selenium\\File Moving Task\\Transpose File Data\\File Transpose.txt";
+		final String sourceFile = "path\\to\\file\\Filename.txt";
 		BufferedReader br = new BufferedReader(new FileReader(sourceFile));
 		
-        String stringLine = br.readLine();
-        int i1 = 0, j1 = 0;
+        	String stringLine = br.readLine();
+        	int i1 = 0, j1 = 0;
 		while (stringLine != null)
 		{
 			//Splitting a String by taking ' ' as delimiter
@@ -30,13 +35,11 @@ public class FileDataTranspose
 			{
 				for(String s:tokens)
 				{
-				
 					if (!s.trim().isEmpty())
 					{
 						array[i1][j1] = s;
 						j1++;
 					}
-					//System.out.println("Word" +j1+ " : "+s);
 				}
 				stringLine = br.readLine();
 				i1++;
@@ -45,28 +48,6 @@ public class FileDataTranspose
 			}
 		}
 		br.close();
-		
-		// Printing original Matrix
-		System.out.println("\nThe above matrix before Transpose is:\n");
-	  	for(i = 0; i < row; i++)
-	  	{
-	  		for(j = 0; j < column; j++)
-	  		{
-	  			System.out.print(String.format("%-20s", array[i][j]));
-	  		}
-	  		System.out.println("");
-	  	}
-	  	
-	  	// Printing transposed matrix
-	 	System.out.println("\nThe above matrix after Transpose is:\n");
-	  	for(i = 0; i < column; i++)
-	  	{
-	  		for(j = 0; j < row; j++)
-	  		{
-	  			System.out.print(String.format("%-20s", array[j][i]));
-	  		}
-	  		System.out.println("");
-	  	}
 	  	
 	  	// Write to file
 	  	final String destinationFile = "Y:\\Selenium\\File Moving Task\\Transpose File Data\\Transposed File.txt";
@@ -76,8 +57,7 @@ public class FileDataTranspose
 	  	{
 	  		for(j = 0; j < row; j++)
 	  		{
-	  			bw.write(String.format("%-20s", array[j][i]));
-	  			//bw.write(" ");
+	  			bw.write(String.format("%-15s", array[j][i]));
 	  		}
 	  		bw.newLine();
 	  	}
