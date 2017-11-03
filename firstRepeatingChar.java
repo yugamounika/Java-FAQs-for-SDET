@@ -29,7 +29,7 @@ public class firstRepeatingChar
 	// Driver method to test above method
 	public static void main (String[] args)
 	{
-	    String str = "geeksforgeeks";
+	    String str = "yugachyuga";
 	    char[] arr = str.toCharArray();
 	    //System.out.println(firstRepeating(arr));
 	    System.out.println("First repeated character in '" +str+ "' is: " +firstRepeating(arr));
