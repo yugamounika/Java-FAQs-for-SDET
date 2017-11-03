@@ -2,6 +2,10 @@ package glassdoorFAQ;
 
 import java.util.Scanner;
 
+/*Input: Hello World
+  Output: World Hello
+  */
+
 public class wordReverse
 {
 	public static void main(String[] args)
@@ -10,9 +14,9 @@ public class wordReverse
 		//String delimiter = ":";
 		System.out.println("Enter string with chosen delimiter");
 		Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
+        	String input = scan.nextLine();
         
-        String[] words = input.split(" ");
+        	String[] words = input.split(" ");
 		//String[] words = input.split(""+delimiter);
 		int length = words.length;
 		StringBuilder finalString = new StringBuilder(input.length());
@@ -28,6 +32,3 @@ public class wordReverse
 	}
 
 }
-
-// Input: Hello World
-// Output: World Hello
